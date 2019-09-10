@@ -66,7 +66,7 @@ def upgradeCode(state):
     try:
         path = os.path.join(interp_path, 'GitHub', 'files.zip')
         path_upgrade = os.path.join(interp_path, 'GitHub', 'upgrated.txt')
-        repo = git.GitHub().repository('gamug', 'pdfMiner_dev')
+        repo = git.GitHub().repository('gamug', 'pdfMiner')
         repo.archive('zipball', path=path)  # download repository content
         a = zipfile.ZipFile(path, 'r')  # This is the zip download Github content loaded
         # here we prepare download version information
